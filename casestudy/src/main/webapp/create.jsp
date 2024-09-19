@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Thêm học viên</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
@@ -31,8 +31,8 @@
             <input type="number" class="form-control" id="point" name="point" min="0" required>
         </div>
         <div class="form-group">
-            <label for="id_class">Chọn lớp </label>
-            <select name="id_class" id="id_class">
+            <label for="clazzId">Chọn lớp </label>
+            <select name="clazzId" id="clazzId">
                 <c:forEach items="${list}" var="clazz">
                     <option value="${clazz.id}"> ${clazz.name} </option>
                 </c:forEach>

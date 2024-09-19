@@ -47,7 +47,7 @@ public class StudentServlet extends HttpServlet {
     }
 //    private void showUpdateForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //        int id = Integer.parseInt(request.getParameter("id"));
-//        List<Student> students = iStudentService.getStudentById(id);
+//        Student students = iStudentService.getStudentById(id);
 //        if (!students.isEmpty()) {
 //            request.setAttribute("student", students.get(0));
 //            request.getRequestDispatcher("/update.jsp").forward(request, response);
@@ -116,9 +116,9 @@ public class StudentServlet extends HttpServlet {
         int point = Integer.parseInt(request.getParameter("point"));
 
         int clazzId = Integer.parseInt(request.getParameter("clazzId"));
-        Clazz clazz = new Clazz(clazzId, "");
+        Clazz clazz = new Clazz(clazzId);
 
-        Student student = new Student(name, email, gender, clazz, point);
+        Student student = new Student(name, email, gender, point, clazz);
         iStudentService.addNewStudent(student);
         try {
             response.sendRedirect(request.getContextPath() + "/list");

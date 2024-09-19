@@ -26,7 +26,7 @@ public class Student {
         this.point = point;
     }
 
-    public Student(String name, String email, int gender, Clazz clazz, int point) {
+    public Student(String name, String email, int gender,int point, Clazz clazz ) {
         this.name = name;
         this.email = email;
         this.gender = gender;
@@ -34,7 +34,8 @@ public class Student {
         this.point = point;
     }
 
-    public Student(String name, Clazz clazz, String email, int gender, int id, int point) {
+//    name, email, gender, point , clazz
+    public Student(int id,String name, String email ,int gender, int point,Clazz clazz) {
         this.name = name;
         this.clazz = clazz;
         this.email = email;

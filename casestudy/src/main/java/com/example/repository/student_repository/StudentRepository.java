@@ -42,7 +42,8 @@ public class StudentRepository implements IStudentRepository {
                 int point = resultSet.getInt("student_point");
                 int class_id = resultSet.getInt("id_class");
                 String class_name = resultSet.getString("class_name");
-                list.add(new Student( name,new Clazz(class_id, class_name), email, gender, id, point));
+//                name, email, gender, point , clazz
+                list.add(new Student(id, name,email,gender,point,new Clazz(class_id, class_name) ));
             }
         } catch (SQLException e){
             System.err.println(e.getMessage());
@@ -66,7 +67,8 @@ public class StudentRepository implements IStudentRepository {
                 int point = resultSet.getInt("student_point");
                 int classId = resultSet.getInt("id_class");
                 String className = resultSet.getString("class_name");
-                return (new Student(name, new Clazz(classId, className), email, gender, studentId, point));
+//                name, email, gender, point , clazz
+                return (new Student(studentId,name, email,gender,point, new Clazz(classId, className)));
             }
         } catch(SQLException e){
             System.err.println(e.getMessage());
