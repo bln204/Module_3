@@ -68,7 +68,7 @@
         </tbody>
     </table>
     <div>
-        <a href="create.jsp" class="btn btn-primary">Thêm mới học viên</a>
+        <a href="?action=create" class="btn btn-primary">Thêm mới học viên</a>
     </div>
 </div>
 
