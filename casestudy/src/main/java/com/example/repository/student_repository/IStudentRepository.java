@@ -12,4 +12,6 @@ public interface IStudentRepository {
     void addNewStudent(Student student);
     void deleteStudent(int id);
     List<Clazz> findALLClass();
+    List<Student> searchStudent(String name,String email);
+    Student findStudentByEmail(String email);
 }

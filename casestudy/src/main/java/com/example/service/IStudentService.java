@@ -12,4 +12,6 @@ public interface IStudentService {
     void deleteStudent(int id);
     void save(Student student);
     List<Clazz> findAllClass();
+    List<Student> searchStudent(String name, String email);
+    Student findStudentByEmail(String email);
 }

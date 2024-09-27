@@ -26,6 +26,11 @@ public class StudentService implements IStudentService {
     }
 
     @Override
+    public List<Student> searchStudent(String name, String email) {
+        return iStudentRepository.searchStudent(name, email);
+    }
+
+    @Override
     public Student getStudentById(int id) {
         return iStudentRepository.getStudentById(id);
     }
@@ -38,5 +43,10 @@ public class StudentService implements IStudentService {
     @Override
     public List<Clazz> findAllClass() {
         return iStudentRepository.findALLClass();
+    }
+
+    @Override
+    public Student findStudentByEmail(String email) {
+        return iStudentRepository.findStudentByEmail(email);
     }
 }
